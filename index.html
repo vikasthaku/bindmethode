@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let youtuber={
+            name:'vikastechnical',
+            content:'programming'
+        }
+
+        let youtuber1={
+            name:'vikastechnical1',
+            content:'programming1'
+        }
+
+        let youtuber2={
+            name:'vikastechnical2',
+            content:'programming2'
+        }
+
+        let youtuber3={
+            name:'vikastechnical3',
+            content:'programming3'
+        }
+
+         function features(){
+            console.log(`my fav youtuber name is ${this.name} He made vidoes on ${this.content}.topic`);
+         }
+         let features1 = features.bind(youtuber)
+         features1()
+    </script>
+</body>
+</html>
