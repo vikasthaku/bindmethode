@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS (Use a CDN or host it locally) -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Bootstrap Form</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding: 50px;
+        }
+
+        .form-container {
+            max-width: 400px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+        .error{
+            font-size: 1rem;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Bootstrap Form</h2>
+        <form  onsubmit="return validation()">
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" class="form-control" id="firstName" placeholder="Enter your first name"><br>
+                <span class="error" id="fname"></span>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" class="form-control" id="lastName" placeholder="Enter your last name"><br>
+                <span class="error" id="lname"></span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email"><br>
+           
+                <span class="error" id="uemail"></span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter your password"><br>
+                <span class="error" id="upass"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmpassword">Confirm Password</label>
+                <input type="password" class="form-control" id="confirmpassword" placeholder="Enter your confirm  password"><br>
+                <span class="error" id="cupass"></span>
+            </div>
+ 
+            <div class="form-group">
+                <label for="mobile">Mobile</label>
+                <input type="text" class="form-control" id="mobile" placeholder="Enter your mobile">
+                <span class="error" id="cmob"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <script>
+        function validation(){
+          var  firstName=document.getElementById('firstName').value ;
+          var  lastName = document.getElementById('lastName').value;
+          var  password = document.getElementById('password').value ;
+          var  confirmpassword = document.getElementById('confirmpassword').value ;
+          var email = document.getElementById('email').value;
+          var mobile = document.getElementById('mobile').value;
+
+           if(firstName === ''){
+            document.getElementById('fname').innerText ="**First Name Field Is Fill"
+            return false
+           }
+
+           if((firstName.length <=2)||(firstName.length>20)){
+            document.getElementById('fname').innerText ="**Greather Than Two And LessThan Twenty"
+            return false
+           }
+           if(!isNaN(firstName)){
+            document.getElementById('fname').innerText ="**Only Charecter Allow Not Allow Number"
+            return false
+           }
+
+           if(lastName === ''){
+            document.getElementById('lname').innerText ="**Last Name Field Is Fill"
+            return false
+           }
+
+           if((lastName.length <=2)||(lastName.length>20)){
+            document.getElementById('lname').innerText ="**Greather Than Two And LessThan Twenty"
+            return false
+           }
+           if(!isNaN(lastName)){
+            document.getElementById('lname').innerText ="**Only Charecter Allow Not Allow Number"
+            return false
+           }
+
+           if(email === ''){
+            document.getElementById('uemail').innerText ="**Email Field Is Fill"
+            return false
+           }
+
+           if(email.indexOf('@')<=0){
+            document.getElementById('uemail').innerText ="**@Invalid Position"
+            return false
+           }
+
+           if((email.charAt(email.length-4)!='.' && email.charAt(email.length-3)!='.')){
+            document.getElementById('uemail').innerText ="**.Invalid Position"
+            return false
+           }
+
+
+           if(password === ''){
+            document.getElementById('upass').innerText ="**Password Field Is Fill"
+            return false
+           }
+
+           if((password.length <=5)||(password.length>20)){
+            document.getElementById('upass').innerText ="**Greather Than Five And LessThan Twenty"
+            return false
+           }
+           if(isNaN(password)){
+            document.getElementById('upass').innerText ="**Only Number Allow Not Allow Not All Charecter"
+            return false
+           }
+
+           if(confirmpassword === ''){
+            document.getElementById('cupass').innerText ="**Confirm Password Field Is Fill"
+            return false
+           }
+
+           if(confirmpassword!=password){
+            document.getElementById('cupass').innerText ="**Confirm Password Dos't Match"
+            return false
+           }
+           if(mobile ===''){
+            document.getElementById('cmob').innerText ="**Mobile Field Is Fill"
+            return false
+           }
+
+           if(isNaN(mobile)){
+            document.getElementById('cmob').innerText ="**Only Number Allow Not Allow Not All Charecter"
+            return false
+           }
+           if(mobile.length!=10){
+            document.getElementById('cmob').innerText ="**Only Number Allow Not Allow Not All Charecter"
+            return false
+           }
+
+        }
+    </script>
+    <!-- Bootstrap JS (Use a CDN or host it locally) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

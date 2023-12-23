@@ -1,0 +1,133 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // const FunA = () =>{
+        //     setTimeout(()=>{
+        //         console.log("welcome FunA");
+        //     },3000)
+        // }
+
+        //  const funB =()=>{
+        //     console.log("welcome FunB");
+        //  }
+        //  FunA()
+        //  funB()
+
+        // const perOne =(friend,callfriend)=>{
+        //     console.log(`I am a right Now. I am talking to ${friend}.I will call you back`);
+        //     callfriend()
+        // }
+
+        // const perTwo = ()=>{
+        //     console.log(`Hey what's up. I call back you dekha `);
+        // }
+        // perOne("Thapa",perTwo);
+        
+    </script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludo Game</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        #board {
+            display: grid;
+            grid-template-columns: repeat(11, 50px);
+            grid-template-rows: repeat(11, 50px);
+            gap: 1px;
+            border: 1px solid #000;
+        }
+
+        .cell {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            border: 1px solid #000;
+            box-sizing: border-box;
+        }
+
+        .red { background-color: #ff0000; }
+        .green { background-color: #00ff00; }
+        .yellow { background-color: #ffff00; }
+        .blue { background-color: #0000ff; }
+
+        .dice {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            font-size: 24px;
+        }
+
+        .btn-roll {
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="board"></div>
+    <div class="dice" id="dice">Dice: 1</div>
+    <button class="btn-roll" onclick="rollDice()">Roll Dice</button>
+
+    <script>
+        const players = ['red', 'green', 'yellow', 'blue'];
+        let currentPlayer = 0;
+
+        function createBoard() {
+            const board = document.getElementById('board');
+            for (let row = 0; row < 11; row++) {
+                for (let col = 0; col < 11; col++) {
+                    const cell = document.createElement('div');
+                    cell.className = 'cell';
+                    if ((row === 0 || row === 10) && (col === 0 || col === 10)) {
+                        cell.classList.add('red');
+                    } else if ((row === 0 || row === 10) && (col === 5)) {
+                        cell.classList.add('green');
+                    } else if ((col === 0 || col === 10) && (row === 5)) {
+                        cell.classList.add('yellow');
+                    } else if ((col === 0 || col === 10) && (row === 0 || row === 10)) {
+                        cell.classList.add('blue');
+                    }
+                    board.appendChild(cell);
+                }
+            }
+        }
+
+        function rollDice() {
+            const dice = document.getElementById('dice');
+            const result = Math.floor(Math.random() * 6) + 1;
+            dice.textContent = `Dice: ${result}`;
+            currentPlayer = (currentPlayer + 1) % players.length;
+        }
+
+        window.onload = function () {
+            createBoard();
+        };
+    </script>
+</body>
+</html> -->
