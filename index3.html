@@ -1,0 +1,235 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> -->
+    <!-- <script> -->
+        <!-- // function reverString(str){
+        //     return str.split('').reverse().join('');
+        // }
+        // let originalString="vikas jadaun";
+        // let reveredString = reverString(originalString)
+        //  console.log(originalString);
+        //  console.log(reveredString); 
+
+        //  let str ="vikas jadaun";
+        //  let str1=str.length;
+        //  let str2='';
+        //  for(let i=str1-1; i>=0; i--){
+        //     str2=str2+str[i]
+        //  }
+        //  console.log(str2);
+
+        // let number1=90;
+        // let number2=9;
+        // let number3=98;
+
+        //  function smallNumber(a,b,c){
+        //     return Math.min(a,b,c)
+        //  }
+        //  let smalldNumber= smallNumber(number1,number2,number3);
+        //  console.log(` The small number ${number1} , ${number2} and ${number3} and small value ${smalldNumber}`);
+        //  console.log(smalldNumber);
+
+        // function reverString(str){
+        //     return str.split('').reverse().join('');
+        // }
+        // let originalString = "Hellow World";
+        // let reveredString = reverString(originalString);
+        // console.log(originalString);
+        // console.log(reveredString);
+
+        // let number1=9;
+        // let number2=90;
+        // let number3=8;
+        // function smallNumber(a,b,c){
+        //     return Math.min(a,b,c)
+        // }
+        // let smalldNumber = smallNumber(number1,number2,number3)
+        // console.log(smalldNumber);
+
+        //  function getResult(){
+        //     var  str  = "This is My car";
+        //     let arr1=[1,2,3,4,5,6,7,7]
+        //  var arr =str.split(" ");
+        //  document.getElementById("output").innerHTML=arr
+        //  document.getElementById("output").innerHTML=arr1
+        //  }
+        // Generate an array with values of different types dynamically
+// function generateMixedArray() {
+//   return [
+//     1,
+//     'hello',
+//     true,
+//     null,
+//     undefined,
+//     { key: 'value' },
+//     [1, 2, 3],
+//     function () {
+//       console.log('Function!');
+//     },
+//   ];
+// }
+
+// Store values in different variables dynamically
+// function storeValuesDynamically(mixedArray) {
+//   const variableNames = ['numberVar', 'stringVar', 'booleanVar', 'nullVar', 'undefinedVar', 'objectVar', 'arrayVar', 'functionVar'];
+
+//   const result = {};
+//   variableNames.forEach((variable, index) => {
+//     result[variable] = mixedArray[index];
+//   });
+
+//   return result;
+// }
+
+// Display values using console.log dynamically
+// function displayValuesDynamically(variables) {
+//   for (const variable in variables) {
+//     if (variables.hasOwnProperty(variable)) {
+//       console.log(`${variable}:`, variables[variable]);
+//     }
+//   }
+// }
+
+// Generate mixed array
+// const mixedArray = generateMixedArray();
+
+// Store values in different variables dynamically
+// const variables = storeValuesDynamically(mixedArray);
+
+// Display values using console.log dynamically
+// displayValuesDynamically(variables);
+
+    // </script> -->
+    <!-- <p id="output"></p>
+    <button onclick="getResult()">split</button> -->
+<!-- </body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Form Value Retrieval</title>
+</head>
+<body>
+
+Sample Form
+<form id="myForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" value="John Doe">
+
+    <br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" value="john@example.com">
+
+    <br>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" value="25">
+
+    <br>
+
+    <button type="button" onclick="getFormValues()">Get Form Values</button>
+</form>
+
+Display Area for Results -->
+<!-- <div id="result"></div> -->
+
+<!-- <script>
+    function getFormValues() {
+        // Retrieve values from the form
+        const nameValue = document.getElementById('name').value;
+        const emailValue = document.getElementById('email').value;
+        const ageValue = document.getElementById('age').value;
+
+        // Display the values
+        const resultDiv = document.getElementById('result');
+        resultDiv.innerHTML = `
+            <p>Name: ${nameValue}</p>
+            <p>Email: ${emailValue}</p>
+            <p>Age: ${ageValue}</p>
+        `;
+    }
+</script> -->
+<!-- 
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // (function(){
+        //         var messgae = "Hello from the IIFE";
+        //         console.log(messgae);
+        // })();
+        //  var greeting ="vikas";
+        //  console.log(window.greeting);
+
+         (function(name){
+            var greeting = 'Hello '+ name + '!';
+            console.log(greeting);
+         })('John')
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Year Slider</title>
+    <style>
+        /* Add some styling for better appearance */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        #yearDisplay {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Slider Input -->
+<label for="yearSlider">Select a Year:</label>
+<input type="range" id="yearSlider" min="2000" max="2023" step="1" value="2020">
+
+<!-- Display Area for Selected Year -->
+<div id="yearDisplay"></div>
+
+<script>
+    // Get the slider and display elements
+    const yearSlider = document.getElementById('yearSlider');
+    const yearDisplay = document.getElementById('yearDisplay');
+
+    // Update the display when the slider value changes
+    yearSlider.addEventListener('input', function () {
+        const selectedYear = yearSlider.value;
+        yearDisplay.textContent = `Selected Year: ${selectedYear}`;
+    });
+
+    // Initial display
+    const initialYear = yearSlider.value;
+    yearDisplay.textContent = `Selected Year: ${initialYear}`;
+</script>
+
+</body>
+</html>
+
