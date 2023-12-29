@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Position Example</title>
+
+  <style>
+    .static-element {
+      /* Default (static) positioning */
+      background-color: #f0f0f0;
+    }
+
+    .relative-element {
+      /* Relative positioning with offset */
+      position: relative;
+      top: 10px;
+      left: 20px;
+      background-color: #e0e0e0;
+    }
+
+    .absolute-element {
+      /* Absolute positioning relative to parent */
+      position: absolute;
+      top: 60px;
+      right: 100px;
+      background-color: #d0d0d0;
+    }
+  </style>
 </head>
 <body>
-    <script>
-      
-         
-    </script>
+
+  <div class="static-element">Static Element</div>
+  <div class="relative-element">Relative Element</div>
+  <div class="absolute-element">Absolute Element</div>
+
 </body>
 </html>
