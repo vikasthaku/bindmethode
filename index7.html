@@ -1,0 +1,87 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+       
+        section div{
+            width: 30%;
+            padding: 20px;
+            border: 2px solid black;
+        }
+        .flexone{
+            /* flex: 1; */
+            background: green;
+        }
+        .flextwo{
+            /* flex: 1; */
+            background: blue;
+        }
+        .flexthree{
+            /* flex: 1; */
+            background: red;
+        }
+
+        @media (min-width:768px){
+            section{
+            /* width: 100%; */
+            /* background: cyan; */
+            display: flex;
+            /* flex-direction: row-reverse; */
+            /* flex-direction: column-reverse; */
+            /* flex-direction: row; */
+            /* justify-content: space-around; */
+            /* justify-content: start; */
+            /* justify-content: end; */
+            justify-content: space-between;
+         
+            /* justify-content: space-evenly; */
+        }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="flexone">
+           1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta eligendi distinctio provident sapiente totam consequuntur voluptatem nemo illum facere aspernatur vel quisquam, facilis delectus nihil quidem aliquid blanditiis debitis praesentium!
+        </div>
+        <div class="flextwo">
+          2  Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi voluptatem corporis dolore quaerat molestiae, saepe adipisci accusantium
+        </div>
+        <div class="flexthree">
+          3  Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe totam officiis molestiae doloremque similique animi veniam? Nisi debitis pariatur illo sit fugit, inventore quos nemo, veniam quam eos nam corrupti.
+        </div>
+    </section>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let global="i am global"
+        function  outerFunction(){
+            let local="i am local"
+             function innerFunction(){
+                console.log(global);
+                console.log(local);
+             }
+             return innerFunction()
+        }
+        outerFunction()
+    </script>
+</body>
+</html>

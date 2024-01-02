@@ -1,0 +1,269 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript is a best programming language</title>
+</head>
+<body>
+ <script>
+    // function checkFirstElement(array){
+    //     if(Array.isArray(array) && array.length>0 && array[0] === 5){
+    //         return 5;
+    //     }else{
+    //         return null ;
+    //     }
+    // }
+    // let array1 = [5,10,6];
+    // let result1 = checkFirstElement(array1);
+    // console.log(result1);
+    // let arry2 = [2,7,5];
+    // let resutl2 = checkFirstElement(arry2)
+    // console.log(resutl2);
+
+    // function checkFirstElement(array){
+    //     if(Array.isArray(array) && array.length>0 && array[0]===5){
+    //         return 5 ;
+    //     }else{
+    //         return null;
+    //     }
+    // }
+    // let array1 = [3,2,13];
+    // let result1 = checkFirstElement(array1)
+    // console.log(result1);
+    // let arry2 = [5,3,2]
+    // let resutl2 = checkFirstElement(arry2)
+    // console.log(resutl2);
+
+    //  function reverString(str){
+    //     return str.split(" ").reverse().join(" ");
+    //  }
+    //  let originalString ="Hello World";
+    //  let reverStringValue = reverString(originalString)
+    //  console.log(reverStringValue);
+
+    //  function checkFirstElement(array){
+    //     if(Array.isArray(array) && array.length>0 && array[0] ===5){
+    //         return 5;
+    //     }else{
+    //         return null
+    //     }
+    //  }
+    //  let array1=[12,12,3];
+    //  let result1 = checkFirstElement(array1);
+    //  console.log(result1);
+    //  let arry2 = [5,3,6];
+    //  let resutl2 = checkFirstElement(arry2);
+    //  console.log(resutl2);
+
+    //  let number1 =45;
+    //  let number2=89;
+    //  let number3=9;
+    //   function checkSmallValue(a,b,c){
+    //     return Math.min(a,b,c)
+    //   }
+    //   let checkFirstElement1= checkSmallValue(number1,number2,number3);
+    //   console.log(checkFirstElement1);
+
+    //  function checkFirstElement(array){
+    //     if(Array.isArray(array) && array.length>0 && array[0]===5){
+    //         return 5;
+    //     }else{
+    //         return null ;
+    //     }
+    //  }
+    //  let array1 = [5,10,6];
+    //  let result1 = checkFirstElement(array1)
+    //  console.log(result1);
+    //  let arry2 = [6,13,6];
+    //  let resutl2 = checkFirstElement(arry2);
+    //  console.log(resutl2);
+
+    //    let number1 = 56;
+    //    let number2=90;
+    //    let number3 =9;
+    //    function checkFirstElement(a,b,c){
+    //     return Math.min(a,b,c)
+    //    }
+    //    let checkFirstElement1 = checkFirstElement(number1,number2,number3);
+    //    console.log(checkFirstElement1);
+    //  function reverString(str){
+    //     return str.split("").reverse().join("")
+    //  }
+    //  let originalString="Hello World";
+    //  console.log(originalString);
+    //  let reverStringValue=reverString(originalString)
+    //  console.log(reverStringValue);
+
+    //  let str ="vikas jadaun";
+    //  let str1= str.length;
+    //  let str2="";
+
+    //   for(let i=str1-1; i>=0; i--){
+    //     str2=str2+str[i]
+    //   }
+    //   console.log(str2);
+
+//     function secondSmallest(var1, var2, var3) {
+//   // Ensure all inputs are numbers
+//   if (typeof var1 !== 'number' || typeof var2 !== 'number' || typeof var3 !== 'number') {
+//     return "Please provide numeric values for all three variables.";
+//   }
+
+//   // Create an array with the three variables
+//   const array = [var1, var2, var3];
+
+//   // Remove duplicates by converting the array to a Set and back to an array
+//   const uniqueArray = [...new Set(array)];
+
+//   // Check if there are at least two unique values
+//   if (uniqueArray.length < 2) {
+//     return "Please provide at least two unique values.";
+//   }
+
+//   // Sort the array in ascending order
+//   const sortedArray = uniqueArray.sort((a, b) => a - b);
+
+//   // Return the second smallest value
+//   return sortedArray[1];
+// }
+
+// // Example usage
+// const result = secondSmallest(51, 2, 8);
+// console.log("Second Smallest Value:", result);
+
+ </script>    
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let obj= {
+            name:'vikas',
+            lname:'singh',
+            fullName:function(){
+                console.log(this);
+            }
+        }
+        obj.fullName()
+
+        function data(){
+            console.log(this);
+        }
+        data()
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Infinite Scrolling with Bootstrap Cards</title>
+  <style>
+    /* Custom styles for demonstration purposes */
+    .infinite-scroll-container {
+      column-count: 1;
+    }
+
+    @media (min-width: 576px) {
+      .infinite-scroll-container {
+        column-count: 2;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .infinite-scroll-container {
+        column-count: 3;
+      }
+    }
+
+    .card {
+      margin: 10px 0;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="infinite-scroll-container" id="infinite-scroll-container">
+    <!-- Cards will be dynamically loaded here -->
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Dummy data for demonstration
+  const dummyData = [
+    { image: 'https://via.placeholder.com/400x200', title: 'Card 1' },
+    { image: 'https://via.placeholder.com/400x200', title: 'Card 2' },
+    { image: 'https://via.placeholder.com/400x200', title: 'Card 3' },
+    { image: 'https://via.placeholder.com/400x200', title: 'Card 1' },
+    { image: 'https://via.placeholder.com/400x200', title: 'Card 2' },
+    { image: 'https://via.placeholder.com/400x200', title: 'Card 3' },
+    { image: 'https://via.placeholder.com/400x200', title: 'Card 1' },
+    { image: 'https://via.placeholder.com/400x200', title: 'Card 2' },
+    { image: 'https://via.placeholder.com/400x200', title: 'Card 3' },
+    { image: 'https://via.placeholder.com/400x200', title: 'Card 1' },
+    { image: 'https://via.placeholder.com/400x200', title: 'Card 2' },
+    { image: 'https://via.placeholder.com/400x200', title: 'Card 3' },
+    { image: 'https://via.placeholder.com/400x200', title: 'Card 1' },
+    { image: 'https://via.placeholder.com/400x200', title: 'Card 2' },
+    { image: 'https://via.placeholder.com/400x200', title: 'Card 3' },
+    { image: 'https://via.placeholder.com/400x200', title: 'Card 1' },
+    { image: 'https://via.placeholder.com/400x200', title: 'Card 2' },
+    { image: 'https://via.placeholder.com/400x200', title: 'Card 3' },
+    { image: 'https://via.placeholder.com/400x200', title: 'Card 1' },
+    { image: 'https://via.placeholder.com/400x200', title: 'Card 2' },
+    { image: 'https://via.placeholder.com/400x200', title: 'Card 3' },
+    // Add more data as needed
+  ];
+
+  // Function to create and append cards to the container
+  function appendCards(data) {
+    const container = document.getElementById('infinite-scroll-container');
+    data.forEach(item => {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `
+        <img src="${item.image}" class="card-img-top" alt="${item.title}">
+        <div class="card-body">
+          <h5 class="card-title">${item.title}</h5>
+        </div>
+      `;
+      container.appendChild(card);
+    });
+  }
+
+  // Initial load
+  appendCards(dummyData);
+
+  // Simulate infinite scrolling by appending more cards when scrolled to the bottom
+  window.addEventListener('scroll', () => {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
+      // Append more cards when scrolled to the bottom
+      appendCards(dummyData);
+    }
+  });
+</script>
+</body>
+</html>
