@@ -72,16 +72,125 @@
 </head>
 <body>
     <script>
-        let global="i am global"
-        function  outerFunction(){
-            let local="i am local"
-             function innerFunction(){
-                console.log(global);
-                console.log(local);
-             }
-             return innerFunction()
-        }
-        outerFunction()
+        // Peserve the data
+        // let global="i am global"
+        // function  outerFunction(){
+        //     let local="i am local"
+        //      function innerFunction(){
+        //         console.log(global);
+        //         console.log(local);
+        //      }
+        //      return innerFunction()
+        // }
+        // outerFunction()
+
+//         Multiple Callbacks:
+// Definition: A function can accept multiple callbacks, which are executed in a specific order.
+
+        function multipleCallbacks(callback1, callback2) {
+  console.log("Executing the first callback");
+  callback1();
+  console.log("Executing the second callback");
+  callback2();
+}
+
+multipleCallbacks(function() {
+  console.log("First callback executed");
+}, function() {
+  console.log("Second callback executed");
+});
+
+// Anonymous Function Callbacks:
+// Definition: Callback functions can also be defined anonymously inline.
+// Example:
+
+function functionWithAnonymousCallback(callback) {
+  console.log("Performing some operation");
+  callback();
+}
+
+functionWithAnonymousCallback(function() {
+  console.log("Anonymous callback executed");
+});
+
+// Named Function Callbacks:
+
+// Definition: Callback functions can be named and defined separately for better code organization.
+// Example:
+
+function namedCallback() {
+  console.log("Named callback executed");
+}
+
+function functionWithCallback(callback) {
+  console.log("Performing some operation");
+  callback();
+}
+
+functionWithCallback(namedCallback);
+
+// Asynchronous Callbacks:
+
+// Definition: These callbacks are executed after the completion of an asynchronous operation, such as a network request or a timer.
+// Example:
+
+function asynchronousFunction(callback) {
+  console.log("Doing some asynchronous work");
+  setTimeout(function() {
+    console.log("Async callback executed");
+    callback();
+  }, 1000);
+}
+
+asynchronousFunction(function() {
+  console.log("After asynchronous work is done");
+});
+
+
+// Synchronous Callbacks:
+
+// Definition: These callbacks are executed immediately after they are passed as arguments.
+// Example:
+
+function synchronousFunction(callback) {
+  console.log("Doing some synchronous work");
+  callback();
+}
+
+synchronousFunction(function() {
+  console.log("Synchronous callback executed");
+});
+
+
+// Higher-order function taking a callback
+function processInput(input, callback) {
+  const result = callback(input);
+  console.log(`Result: ${result}`);
+}
+
+// Callback functions
+function square(x) {
+  return x * x;
+}
+
+function double(x) {
+  return x * 2;
+}
+
+// Using the higher-order function with different callbacks
+processInput(5, square); // Result: 25
+processInput(7, double); // Result: 14
+
+console.log("hii");
+    function callbackFirst(a){
+      return a*a
+    }
+    function hof(callbackFirst){
+      return callbackFirst(10)
+    }
+    let result  = hof(  callbackFirst)
+    console.log(result);
+    console.log("hello");
     </script>
 </body>
 </html>

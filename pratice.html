@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let number= 90;
+        // let number1=8;
+        // let number2=9;
+        // function smallValueFind(a,b,c){
+        //     return Math.min(a,b,c)
+        // }
+        // let reult = smallValueFind(number,number1,number2);
+        // console.log(reult);
+
+        // function replaceString(str){
+        //     return str.split('').reverse().join('')
+        // }
+        //   let OrginalString= "Hello World";
+        //   let ReverString = replaceString(OrginalString)
+        //   console.log(ReverString);
+        // let OrginalString = "Vikas Jadaun";
+        // let ReverString = OrginalString.split('').reverse().join('');
+        // console.log(ReverString);
+         
+          function ArrayFirstValue(array){
+          if  (Array.isArray(array) && array.length>0 && array[0]===5){
+                    return 5
+            }else{
+                return null 
+            }
+          }
+          let array1= [4,4,3]
+          let result = ArrayFirstValue(array1)
+          console.log(result);
+          let array2 = [5,4,3];
+          let result1= ArrayFirstValue(array2);
+          console.log(result1);
+    </script>
+</body>
+</html>
